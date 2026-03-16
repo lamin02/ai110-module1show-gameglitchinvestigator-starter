@@ -14,3 +14,11 @@ def test_guess_too_low():
     # If secret is 50 and guess is 40, hint should be "Too Low"
     result = check_guess(40, 50)
     assert result == "Too Low"
+
+
+def test_check_guess_with_string_secret():
+    # Test that check_guess handles secret as string correctly (fixes high/low bug)
+    # When secret is "50" (string), comparisons should still be numerical
+    assert check_guess(40, "50") == ("Too Low", "📉 Go LOWER!")
+    assert check_guess(60, "50") == ("Too High", "📈 Go HIGHER!")
+    assert check_guess(50, "50") == ("Win", "🎉 Correct!")
