@@ -26,12 +26,18 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+The game is a simple number guessing game where the player tries to guess a secret number within a limited number of attempts. The app gives hints like “too high” or “too low” to help the player reach the correct answer.
 - [ ] Detail which bugs you found.
+The secret number kept resetting because Streamlit reruns the script on every interaction, and the high/low hints were incorrect. The attempts counter also started at the wrong number and the Enter key didn’t submit guesses.
 - [ ] Explain what fixes you applied.
+I fixed the hints in check_guess and also fixed the enter key to work. 
+
 
 ## 📸 Demo
 
 - [ ] [Insert a screenshot of your fixed, winning game here]
+aidemo.png
+inside of folder 
 
 ## 🚀 Stretch Features
 
